@@ -282,9 +282,9 @@
 
 .welcome-frame {
   background: url(../img/welcome-frame.png) no-repeat;
-  height: 725px;
   width: 384px;
-  margin-top: 6px;
+  height: 559px;
+  margin: 6px 0 30px 0;
 }
 
 .bg-logo {
@@ -302,17 +302,42 @@
   background: url(../img/logo.png) no-repeat;
   width: 323px;
   height: 36px;
-  margin: 0 auto 50px;
+  margin: 0 auto 60px;
+}
+
+.screen-reader {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+input[type="search"] {
+  margin: 10px 0px 8px 43px;
+  width: 62%;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0;
+  padding: 6px 0 6px 6px;
+  outline: 0;
+  word-break: normal;
+  -webkit-appearance: none;
+}
+
+input[type="submit"] {
+  color: $blue;
+  padding: 3px;
 }
 
 .arrow {
   position: relative;
   background: url(../img/arrow.png) no-repeat;
   left: 25px;
-  margin-top: 20px;
 }
 
 .alert-frame {
   position: relative;
   background: url(../img/alert-frame.png) no-repeat;
+  width: 384px;
+  height: 116px;
+  margin-bottom: 20px;
 }

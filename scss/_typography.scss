@@ -1,6 +1,10 @@
 $blue: #3874CA;
 $gray: #959595;
 
+@mixin font-stack { 
+  font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+}
+
 #file-cabinet h3 {
   z-index: 10;
   float: left;
@@ -10,30 +14,56 @@ $gray: #959595;
 
 #frames {
     h1 {
+    @include font-stack;
     font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
     color: $blue;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 3px;
   }
     h2 {
+      @include font-stack;
       font-size: 20px;
+      font-weight: bold;
       letter-spacing: 3px;
       color: #3874CA;
-      margin-left: 48px;
-      padding: 19px 0 14px 0;
+      margin-left: 25px;
+      padding: 20px 0 14px 0;
     }
-    p {
-      padding: 0 45px 30px;
-      color: #171613;
-      line-height: 22px;
+    h3 {
+      @include font-stack;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #3874CA;
+      text-align: center;
+      padding: 25px 0 10px 0;
     }
     blockquote {
       font-style: italic;
-      font-size: 14px;
+      font-size: 15px;
     }
     figcaption {
       font-weight: bold;
+      font-size: 15px;
     }
+}
+
+.welcome-frame p {
+  @include font-stack;
+    padding: 0 45px 10px;
+    color: #171613;
+    line-height: 22px;
+}
+
+.alert-frame p {
+  @include font-stack;
+  margin-bottom: 20px;
+  padding: 0 20px 30px;
+  color: #171613;
+  line-height: 22px;
+  text-align: center;
 }
 
 .h3-hover {
@@ -42,7 +72,9 @@ $gray: #959595;
 }
 
 .quote {
+  @include font-stack;
   padding: 0 45px;
   line-height: 22px;
   color: $blue;
 }
+

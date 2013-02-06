@@ -49,16 +49,21 @@ layout: default
            <blockquote>“Eagle is about neighbors taking care of neighbors.” Stay Healthy,™</blockquote>
            <figcaption>Vicki Gregory, <cite>CEO</cite></figcaption>
       </figure>
+      <div>
+        <label for="q" id="search-label" class="screen-reader">Search</label>
+        <input aria-labelledby="search-label" id="q" type="search" name="q" class="search-field" placeholder="Search..." value="">
+        <input type="submit" value="Search" class="button search-button">
+      </div>
       <div class="arrow">
         <h2>PATIENT PORTAL</h2>
         {% include portal-nav.html %}
       </div>
       <div class="bg-logo"></div>
     </div>
-<!--     <div class="alert-frame">
+    <div class="alert-frame">
       <h3>Confused About Medicare?</h3>
       <p>Click on <a class="blue" href="/about/medicare.html">"Medicare Advice"</a> in blue at the bottom of this page for information.</p>
-    </div> -->
+    </div>
   </aside>
 
 {% include footer.html %}

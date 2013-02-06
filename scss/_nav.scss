@@ -46,14 +46,15 @@ nav[role="portal-navigation"] li.active a {
 */
 
   nav[role="footer-navigation"] {
-    margin-left: 0px;
     float: left;
     font-size: 13px;
+    margin-left: 0px;
+    padding: 5px 0 9px;
   }
 
   nav[role="footer-navigation"] li {
     float: left;
-    font-size: 12px;
+    font-size: 9px;
     border-right: 1px solid $gray;
     }
 
@@ -80,4 +81,8 @@ nav[role="portal-navigation"] li.active a {
   nav[role="footer-navigation"] li.active a {
     font-weight: bold;
     color: darken($gray, 10);
-    }  
+    }
+
+.blue {
+  color: $blue !important;
+}
