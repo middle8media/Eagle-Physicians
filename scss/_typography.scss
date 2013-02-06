@@ -1,0 +1,48 @@
+$blue: #3874CA;
+$gray: #959595;
+
+#file-cabinet h3 {
+  z-index: 10;
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#frames {
+    h1 {
+    font-size: 40px;
+    color: $blue;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+    h2 {
+      font-size: 20px;
+      letter-spacing: 3px;
+      color: #3874CA;
+      margin-left: 48px;
+      padding: 19px 0 14px 0;
+    }
+    p {
+      padding: 0 45px 30px;
+      color: #171613;
+      line-height: 22px;
+    }
+    blockquote {
+      font-style: italic;
+      font-size: 14px;
+    }
+    figcaption {
+      font-weight: bold;
+    }
+}
+
+.h3-hover {
+    background: yellow;
+    padding: 1px;
+}
+
+.quote {
+  padding: 0 45px;
+  line-height: 22px;
+  color: $blue;
+}

@@ -1,0 +1,83 @@
+/*
+******************************
+* Portal Navigation
+******************************
+*/
+
+nav[role="portal-navigation"] {
+  margin-left: 35px;
+}
+
+nav[role="portal-navigation"] li {
+  float: left;
+  font-size: 12px;
+  }
+
+nav[role="portal-navigation"] li:last-child {
+  border-right: none;
+  }
+
+nav[role="portal-navigation"] li a {
+  float: left;
+  margin: 0 6px;
+  text-decoration: none;
+  border-bottom: 1px dotted $blue;
+  color: $blue;
+  }
+
+nav[role="portal-navigation"] li a:hover,
+nav[role="portal-navigation"] li a:focus {
+  color: darken($blue, 10);
+  }
+
+nav[role="portal-navigation"] li a:active {
+  color: darken($blue, 15);
+  }
+
+nav[role="portal-navigation"] li.active a {
+  font-weight: bold;
+  color: darken($blue, 10);
+  }
+
+/*
+******************************
+* Footer Navigation
+******************************
+*/
+
+  nav[role="footer-navigation"] {
+    margin-left: 0px;
+    float: left;
+    font-size: 13px;
+  }
+
+  nav[role="footer-navigation"] li {
+    float: left;
+    font-size: 12px;
+    border-right: 1px solid $gray;
+    }
+
+  nav[role="footer-navigation"] li:last-child {
+    border-right: none;
+    }
+
+  nav[role="footer-navigation"] li a {
+    float: left;
+    margin: 0 6px;
+    text-decoration: none;
+    color: $gray;
+    }
+
+  nav[role="footer-navigation"] li a:hover,
+  nav[role="footer-navigation"] li a:focus {
+    color: darken($gray, 10);
+    }
+
+  nav[role="footer-navigation"] li a:active {
+    color: darken($gray, 15);
+    }
+
+  nav[role="footer-navigation"] li.active a {
+    font-weight: bold;
+    color: darken($gray, 10);
+    }  
