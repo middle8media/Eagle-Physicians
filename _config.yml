@@ -1,4 +1,4 @@
-exclude: [scss, config.rb, README.md, app.js, script.js, modernizer-2.6.2.js, lte-ie7.js]
+exclude: [scss, config.rb, README.md, app.js, script.js, animation.js, ease.js, modernizr-2.6.2.js, lte-ie7.js]
 site_name: Greensboro Doctors | Health Care in Greensboro, NC | Eagle Physicians
 tagline:
 keywords: 
