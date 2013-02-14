@@ -1,3 +1,5 @@
+//Cross Browser CSS Transition Support
+
 $(function(){
 // abt folder
   $('.folder-abt')

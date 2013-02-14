@@ -6,6 +6,7 @@
 
 nav[role="portal-navigation"] {
   margin-left: 35px;
+  padding-top: 52px;
 }
 
 nav[role="portal-navigation"] li {
@@ -47,6 +48,7 @@ nav[role="portal-navigation"] li.active a {
 
   nav[role="footer-navigation"] {
     float: left;
+    @include font-stack-files;
     font-size: 13px;
     margin-left: 0px;
     padding: 5px 0 9px;
@@ -85,4 +87,10 @@ nav[role="portal-navigation"] li.active a {
 
 .blue {
   color: $blue !important;
+}
+
+.browse-happy {
+  padding: 20px 0px 0 5px;
+  color: #959595;
+  font-size: 9px;
 }

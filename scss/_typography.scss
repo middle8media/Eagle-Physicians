@@ -1,11 +1,17 @@
 $blue: #3874CA;
 $gray: #959595;
+$lightgray: #A6A6A6;
 
-@mixin font-stack { 
+@mixin font-stack-frames { 
   font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
 }
 
+@mixin font-stack-files { 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #file-cabinet h3 {
+  @include font-stack-files;
   z-index: 10;
   float: left;
   font-size: 12px;
@@ -14,7 +20,7 @@ $gray: #959595;
 
 #frames {
     h1 {
-    @include font-stack;
+    @include font-stack-frames;
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 3px;
@@ -23,7 +29,7 @@ $gray: #959595;
     padding-bottom: 3px;
   }
     h2 {
-      @include font-stack;
+      @include font-stack-frames;
       font-size: 20px;
       font-weight: bold;
       letter-spacing: 3px;
@@ -32,7 +38,7 @@ $gray: #959595;
       padding: 20px 0 14px 0;
     }
     h3 {
-      @include font-stack;
+      @include font-stack-frames;
       font-size: 16px;
       font-weight: bold;
       letter-spacing: 3px;
@@ -51,14 +57,14 @@ $gray: #959595;
 }
 
 .welcome-frame p {
-  @include font-stack;
+  @include font-stack-frames;
     padding: 0 45px 10px;
     color: #171613;
     line-height: 22px;
 }
 
 .alert-frame p {
-  @include font-stack;
+  @include font-stack-frames;
   margin-bottom: 20px;
   padding: 0 20px 30px;
   color: #171613;
@@ -72,7 +78,7 @@ $gray: #959595;
 }
 
 .quote {
-  @include font-stack;
+  @include font-stack-frames;
   padding: 0 45px;
   line-height: 22px;
   color: $blue;
