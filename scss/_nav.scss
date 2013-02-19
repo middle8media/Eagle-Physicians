@@ -5,24 +5,25 @@
 */
 
 nav[role="portal-navigation"] {
-  margin-left: 35px;
-  padding-top: 52px;
+/*  margin-left: 35px;
+  padding-top: 52px;*/
+  font-size: 11px;
+  position: relative;
+  top: -2px;
+  left: 57px;
+  @include font-stack-files;
 }
 
 nav[role="portal-navigation"] li {
   float: left;
-  font-size: 12px;
-  }
-
-nav[role="portal-navigation"] li:last-child {
-  border-right: none;
+  padding-right: 18px;
   }
 
 nav[role="portal-navigation"] li a {
   float: left;
   margin: 0 6px;
   text-decoration: none;
-  border-bottom: 1px dotted $blue;
+  border-bottom: 1px solid $blue;
   color: $blue;
   }
 
@@ -46,51 +47,56 @@ nav[role="portal-navigation"] li.active a {
 ******************************
 */
 
-  nav[role="footer-navigation"] {
-    float: left;
-    @include font-stack-files;
-    font-size: 13px;
-    margin-left: 0px;
-    padding: 5px 0 9px;
+nav[role="footer-navigation"] {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  @include font-stack-files;
+  font-size: 10px;
+  padding: 5px 0 9px;
+}
+
+nav[role="footer-navigation"] {
+  margin-left: 10px;
+}
+
+nav[role="footer-navigation"] li {
+  float: left;
+  border-left: 1px solid $gray;
   }
 
-  nav[role="footer-navigation"] li {
-    float: left;
-    font-size: 9px;
-    border-right: 1px solid $gray;
-    }
+nav[role="footer-navigation"] li:first-child {
+  border-left: none;
+  }
 
-  nav[role="footer-navigation"] li:last-child {
-    border-right: none;
-    }
+nav[role="footer-navigation"] li a {
+  float: left;
+  margin: 0 3px;
+  text-decoration: none;
+  color: $gray;
+  }
 
-  nav[role="footer-navigation"] li a {
-    float: left;
-    margin: 0 6px;
-    text-decoration: none;
-    color: $gray;
-    }
+nav[role="footer-navigation"] li a:hover,
+nav[role="footer-navigation"] li a:focus {
+  color: darken($gray, 10);
+  }
 
-  nav[role="footer-navigation"] li a:hover,
-  nav[role="footer-navigation"] li a:focus {
-    color: darken($gray, 10);
-    }
+nav[role="footer-navigation"] li a:active {
+  color: darken($gray, 15);
+  }
 
-  nav[role="footer-navigation"] li a:active {
-    color: darken($gray, 15);
-    }
-
-  nav[role="footer-navigation"] li.active a {
-    font-weight: bold;
-    color: darken($gray, 10);
-    }
+nav[role="footer-navigation"] li.active a {
+  font-weight: bold;
+  color: darken($gray, 10);
+  }
 
 .blue {
   color: $blue !important;
 }
 
 .browse-happy {
-  padding: 20px 0px 0 5px;
+  font-size: 10px;
+  padding: 0px 0px 9px 5px;
   color: #959595;
-  font-size: 9px;
+  text-align: center;
 }

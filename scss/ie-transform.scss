@@ -1,3 +1,5 @@
+/* CSS for ie7 & 8*/
+
 article, aside, figure, footer, header, hgroup, nav, section {
   display: block;
 }
@@ -5,6 +7,9 @@ article, aside, figure, footer, header, hgroup, nav, section {
 #file-cabinet {
   width: 533px;
   overflow: visible;
+  h4 {
+    font-weight: normal;
+  }
 }
 
 .folder-group {
@@ -71,13 +76,13 @@ article, aside, figure, footer, header, hgroup, nav, section {
   progid:DXImageTransform.Microsoft.AlphaImageLoader(src=ie8-logo.png,sizingMethod='crop');
 }
 
-.folder-abt h3,
-.folder-drs h3, 
-.folder-loc h3,
-.folder-nws h3,
-.folder-dia h3, 
-.folder-log h3,
-.folder-egl h3 {
+.folder-abt h3, .folder-abt h4,
+.folder-drs h3, .folder-drs h4, 
+.folder-loc h3, .folder-loc h4,
+.folder-nws h3, .folder-nws h4,
+.folder-dia h3, .folder-dia h4, 
+.folder-log h3, .folder-log h4,
+.folder-egl h3, .folder-egl h4 {
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.00000000, M12=1.00000000, M21=-1.00000000, M22=0.00000000,sizingMethod='auto expand')";
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.00000000, M12=1.00000000, M21=-1.00000000, M22=0.00000000,sizingMethod='auto expand');
   -moz-transform:  matrix(0.00000000, -1.00000000, 1.00000000, 0.00000000, 0, 0);
@@ -85,46 +90,135 @@ article, aside, figure, footer, header, hgroup, nav, section {
   -o-transform:  matrix(0.00000000, -1.00000000, 1.00000000, 0.00000000, 0, 0);
 }
 
-.folder-abt h3 {
+.folder-abt {
+  h3 {
     position: relative;
-    top: -390px;
+    top: -379px;
     left: 377px;
+    *top: -386px;
+    *left: 377px;
+}
+  h4 {
+    position: relative;
+    top: -388px;
+    left: 212px;
+    width: 161px;
+    *top: -390px;
+    *left: 351px;
+    *width: 161px;
+  }
 }
 
-.folder-drs h3 {
+.folder-drs {
+  h3 {
+    position: relative;
+    top: -346px;
+    left: 365px;
+    *top: -356px;
+    *left: 365px;
+}
+  h4 {
+    position: relative;
+    top: -372px;
+    left: 222px;
+    width: 154px;
+    *top: -376px;
+    *left: 339px;
+    *width: 155px;
+  }
+}
+
+.folder-loc {
+  h3 {
+   position: relative;
+   top: -367px;
+   left: 351px;
+   *top: -371px;
+   *left: 351px;
+}
+  h4 {
     position: relative;
     top: -358px;
-    left: 365px;
+    left: 181px;
+    width: 148px;
+    *top: -362px;
+    *left: 326px;
+    *width: 149px;
+  }
 }
 
-.folder-loc h3 {
-   position: relative;
-   top: -380px;
-   left: 351px;
-}
-
-.folder-nws h3 {
+.folder-nws {
+  h3 {
    position: relative;
    top: -281px;
    left: 339px;
+   *top: -284px;
+   *left: 339px;
+}
+  h4 {
+    position: relative;
+    top: -351px;
+    left: 251px;
+    width: 146px;
+    *top: -354px;
+    *left: 313px;
+    *width: 149px;
+  }
 }
 
-.folder-dia h3 {
+.folder-dia {
+  h3 {
    position: relative;
-   top: -301px;
-   left: 326px;
+   top: -292px;
+   left: 327px;
+   *top: -297px;
+   *left: 327px;
+}
+  h4 {
+    position: relative;
+    top: -338px;
+    left: 220px;
+    width: 140px;
+    *top: -340px;
+    *left: 303px;
+    *width: 140px;
+  }
 }
 
-.folder-log  h3 {
+.folder-log  {
+  h3 {
    position: relative;
-   top: -287px;
+   top: -279px;
    left: 319px;
+   *top: -281px;
+   *left: 319px;
+}
+  h4 {
+    position: relative;
+    top: -331px;
+    left: 221px;
+    *top: -334px;
+    *left: 295px;
+    width: 138px;
+  }
 }
 
-.folder-egl h3 {
+.folder-egl {
+  h3 {
    position: relative;
-   top: -283px;
+   top: -280px;
    left: 304px;
+   *top: -285px;
+   *left: 304px;
+}
+  h4 {
+    position: relative;
+    top: -324px; /*-324px*/
+    left: 197px;
+    *top: -324px;
+    *left: 280px;
+    width: 138px
+  }
 }
 
 #frames {
@@ -137,8 +231,16 @@ article, aside, figure, footer, header, hgroup, nav, section {
   *margin: 10px 0px 8px 43px;
 }
 
-/* prevents dotted outline in ie */
-a:active, a:focus {
-  outline: none;
-  ie-dummy: expression(this.hideFocus=true);
+.search-field {
+  width: 60%;
+  padding: 5px 0 6px 6px;
+}
+
+input[type="submit"] {
+  padding: 4px 4px;
+  margin-left: 8px;
+  border: 1px solid #4473BE;
+  background: rgb(244,247,249); /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f7f9', endColorstr='#cacdcf',GradientType=0 ); /* IE6-8 */
 }

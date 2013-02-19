@@ -1,14 +1,17 @@
 // yepnope
-yepnope({
-  test: Modernizr.csstransitions,
-  yep: 'css/global.css',
-  nope: 'js/animation-ck.js',
-});
 
+// ie7 & 8
 yepnope({
   test: Modernizr.csstransforms,
   yep: 'css/global.css',
   nope: ['css/global.css', 'css/ie-transform.css']
+});
+
+//ie7, 8 & 9
+yepnope({
+  test: Modernizr.csstransitions,
+  yep: 'css/global.css',
+  nope: 'js/animation-ck.js',
 });
 
 
@@ -63,15 +66,22 @@ $('#folder-in').attr('id', 'folder-in0');
 $(document).ready(function() {
 $('body').fadeIn(1000);
 
-  $('.folder-group a').click(function() {
-    event.preventDefault();
+  $('.folder-group a').click(function(event) {
+    event.preventDefault(event);
     newLocation = this.href;
+    that = $(this);
+    noHover =  
+      $(this).parent().animate({left: '400px'}, 200)
 
-      $(this).parent().animate({ left: '300px'}, 200)
+      setTimeout(function() {
+        that.parent().addClass('zoom no-hover');
+        $('.left-folder').animate({opacity: 0}, 2500)
+      }, 1000);
+
 
       setTimeout(function() {
         $('body').fadeOut(1000, newpage);
-      }, 800);
+      }, 2000);
 
       function newpage() {
       window.location = newLocation;
@@ -80,10 +90,9 @@ $('body').fadeIn(1000);
   });
 });
 
-
-setTimeout(function() {
-    $("#div").animate({
-        marginLeft: "20%",
-        marginTop: "20%",
-    }, 750);
-}, 2000 );
+// setTimeout(function() {
+//     $('#div').animate({
+//         marginLeft: '20%',
+//         marginTop: '20%',
+//     }, 750);
+// }, 2000 );

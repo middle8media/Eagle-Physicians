@@ -10,12 +10,61 @@ $lightgray: #A6A6A6;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#file-cabinet h3 {
-  @include font-stack-files;
-  z-index: 10;
-  float: left;
-  font-size: 12px;
-  font-weight: bold;
+#file-cabinet {
+  h3 {
+    @include font-stack-files;
+    z-index: 10;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    *font-weight: normal;
+    text-decoration: none;
+  }
+    h4 {
+      @include font-stack-files;
+      z-index: 10;
+      float: left;
+      font-size: 11px;
+      font-weight: bold;
+      *font-weight: normal;
+      text-decoration: none;
+    }
+}
+
+/*h4 spans*/
+.abt-chart {
+  position: relative;
+  left: 35px;
+}
+
+.drs-chart {
+  position: relative;
+  left: 32px;
+}
+
+.loc-chart {
+  position: relative;
+  left: 23px;
+}
+
+.nws-chart {
+  position: relative;
+  left: 16px;
+}
+
+.dia-chart {
+  position: relative;
+  left: 13px;
+}
+
+.log-chart {
+  position: relative;
+  left: 14px;
+}
+
+.egl-chart {
+  position: relative;
+  left: 18px;
 }
 
 #frames {
@@ -41,7 +90,7 @@ $lightgray: #A6A6A6;
       @include font-stack-frames;
       font-size: 16px;
       font-weight: bold;
-      letter-spacing: 3px;
+      letter-spacing: 1px;
       color: #3874CA;
       text-align: center;
       padding: 25px 0 10px 0;
@@ -58,9 +107,9 @@ $lightgray: #A6A6A6;
 
 .welcome-frame p {
   @include font-stack-frames;
-    padding: 0 45px 10px;
+    padding: 0 45px 30px;
     color: #171613;
-    line-height: 22px;
+    line-height: 21px;
 }
 
 .alert-frame p {
@@ -80,7 +129,7 @@ $lightgray: #A6A6A6;
 .quote {
   @include font-stack-frames;
   padding: 0 45px;
-  line-height: 22px;
+  line-height: 18px;
   color: $blue;
 }
 
