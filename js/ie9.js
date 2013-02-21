@@ -1,3 +1,4 @@
+// less than or equal to ie8
 
 // yellow highlight on h3 background when hovered
 $(function() {
@@ -9,7 +10,6 @@ $(function() {
         $('.h3-hover').removeClass('h3-hover');
     });
 });
-
 
 //folder-out audio on .mouseover
 $('.folder-group a')
@@ -45,47 +45,30 @@ $('.folder-group a')
 $('#folder-in').attr('id', 'folder-in0');
 
 
-//folder-in audio on .click
-$('.folder-group a')
-  .each(function(i) {
-    if (i != 0) {
-      $('#folder-in')
-        .clone()
-        .attr('id', 'folder-in' + i)
-        .appendTo($(this).parent());
-    }
-    $(this).data('folder-in', i);
-  })
-  .click(function() {
-    $('#folder-in' + $(this).data('folder-in'))[0].play();
-  });
-$('#folder-in').attr('id', 'folder-in0');
+// folder zoom to URL animation
 
+// $(document).ready(function() {
+// $('body').fadeIn(1000);
 
-//folder open to URL animation
+//   $('.folder-group a').click(function(event) {
+//     event.preventDefault(event);
+//     newLocation = this.href;
+//     that = $(this);
 
-$(document).ready(function() {
-$('body').fadeIn(1000);
+//       $(this).parent().animate({left: '300px'}, 200)
 
-  $('.folder-group a').click(function(event) {
-    event.preventDefault(event);
-    newLocation = this.href;
-    that = $(this);
+//       setTimeout(function() {
+//         that.parent().addClass('zoom', 1000, 'easeOutBounce');
+//         $('.left-folder').animate({opacity: 0}, 1000)
+//       }, 1000);
 
-      $(this).parent().animate({left: '300px'}, 200)
+//       setTimeout(function() {
+//         $('body').fadeOut(500, newpage);
+//       }, 2000);
 
-      setTimeout(function() {
-        that.parent().addClass('zoom');
-        $('.left-folder').animate({opacity: 0}, 1000)
-      }, 1000);
+//       function newpage() {
+//       window.location = newLocation;
+//       };
 
-      setTimeout(function() {
-        $('body').fadeOut(500, newpage);
-      }, 2000);
-
-      function newpage() {
-      window.location = newLocation;
-      };
-
-  });
-});
+//   });
+// });

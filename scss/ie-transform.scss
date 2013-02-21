@@ -6,7 +6,6 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 #file-cabinet {
   width: 533px;
-  overflow: visible;
   h4 {
     font-weight: normal;
   }
@@ -14,15 +13,20 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 .folder-group {
   position: relative;
-  left: -60px;
+  float: left;
+  clear: both;
+  left: -40px;
   top: -400px;
   width: 550px;
-  z-index: 1;
+  height: 590px;
+
+/*  read basecamp comment - https://basecamp.com/2076355/projects/1963636-eagle-physicians/todos/31769224-overflow-visible*/
+/*  z-index: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.64278761, M12=-0.76604444, M21=0.76604444, M22=0.64278761,sizingMethod='auto expand')";
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.99939083, M12=-0.03489950, M21=0.03489950, M22=0.99939083,sizingMethod='auto expand');
   -moz-transform:  matrix(0.99939083, 0.03489950, -0.03489950, 0.99939083, 0, 0);
   -webkit-transform:  matrix(0.99939083, 0.03489950, -0.03489950, 0.99939083, 0, 0);
-  -o-transform:  matrix(0.99939083, 0.03489950, -0.03489950, 0.99939083, 0, 0);
+  -o-transform:  matrix(0.99939083, 0.03489950, -0.03489950, 0.99939083, 0, 0);*/
   zoom: 1;
 }
 
@@ -243,4 +247,22 @@ input[type="submit"] {
   background: rgb(244,247,249); /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f7f9', endColorstr='#cacdcf',GradientType=0 ); /* IE6-8 */
+}
+
+.zoom {
+  z-index: 20;
+
+  /* IE8+ - must be on one line, unfortunately */ 
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=3, M12=0, M21=0, M22=3, SizingMethod='auto expand')";
+
+  /* IE6 and 7 */ 
+  filter: progid:DXImageTransform.Microsoft.Matrix(
+          M11=4,
+          M12=0,
+          M21=0,
+          M22=4,
+          SizingMethod='auto expand');
+
+  margin-left: -315px; 
+  margin-top: -400px;
 }

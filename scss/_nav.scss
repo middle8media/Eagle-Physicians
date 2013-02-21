@@ -95,6 +95,7 @@ nav[role="footer-navigation"] li.active a {
 }
 
 .browse-happy {
+  @include font-stack-files;
   font-size: 10px;
   padding: 0px 0px 9px 5px;
   color: #959595;
