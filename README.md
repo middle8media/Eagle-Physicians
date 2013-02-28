@@ -3,6 +3,6 @@
 ==============================
 
 ###Colophone:
-Jekyll  Static Site Generator
-SASS & Compass
-CodeKit 
+* Jekyll  Static Site Generator
+* SASS & Compass
+* CodeKit 
