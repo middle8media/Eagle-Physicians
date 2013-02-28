@@ -1,8 +1,8 @@
-##M8M Compass-Jekyll-Boilerplate  
+##Eagle Physicians Homepage
 
 ==============================
 
-Compass  w/ Susy Responive Grids  
-Jekyll  
-ColorMeSass  
-CodeKit  
+###Colophone:
+Jekyll  Static Site Generator
+SASS & Compass
+CodeKit 
